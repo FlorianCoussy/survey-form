@@ -120,11 +120,13 @@ input:hover[type="text"],
 input:hover[type="email"],
 input:hover[type="number"],
 select:hover,
+textarea:hover,
 input:focus[type="text"],
 input:focus[type="email"],
 input:focus[type="number"],
-select:focus {
-  outline: solid 1px var(--color-orange);
+select:focus,
+textarea:focus {
+  outline: 1px solid var(--color-orange);
 }
 
 select {

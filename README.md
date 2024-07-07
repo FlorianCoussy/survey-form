@@ -1,5 +1,7 @@
 # Build a Survey Form
 
+![alt text](./assets/survey-form-laptop.png)
+
 ### Objective
 Build an app that is functionally similar to [this](https://survey-form.freecodecamp.rocks). **Do not copy this demo project.**
 
