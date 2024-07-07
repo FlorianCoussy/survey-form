@@ -1,0 +1,291 @@
+:root {
+  --color-scarpa-flow: #59595B;
+  --color-tundora: #434343;
+  --color-baltic-sea: #19181D;
+  --color-shark: #1B1C20;
+  --color-woodsmoke: #16151A;
+  --color-orange: #F19040;
+  --color-white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  color: var(--color-scarpa-flow);
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-tundora);
+}
+
+main {
+  max-width: 800px;
+  margin: 5rem auto;
+  background-color: var(--color-baltic-sea);
+  border-radius: 20px;
+  box-shadow: -2rem 3rem 9rem var(--color-baltic-sea);
+  overflow: hidden;
+}
+
+section {
+  float: right;
+  width: 86%;
+  border-left: 1px solid var(--color-tundora);
+  padding: 2rem;
+  background-color: var(--color-shark);
+}
+
+h1,
+legend {
+  font-weight: 400;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--color-white);
+
+  span {
+    color: var(--color-orange);
+  }
+}
+
+p {
+  margin: .5rem auto 3rem;
+  line-height: 1.5rem;
+}
+
+fieldset {
+  margin: 0;
+  border: none;
+  padding: 0;
+
+  label {
+    float: left;
+    width: 48%;
+
+    &:nth-of-type(odd) {
+      margin-right: 1.4rem;
+    }
+  }
+
+  legend {
+    margin-top: 0;
+    font-size: .8rem;
+  }
+}
+
+label {
+  position: relative;
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: .8rem;
+
+  &:hover,
+  &:focus-within {
+    color: var(--color-orange);
+  }
+}
+
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: .5rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-tundora);
+  padding: .5rem 1rem;
+  color: var(--color-white);
+  background-color: var(--color-woodsmoke);
+
+  &+i {
+    position: absolute;
+  }
+}
+
+input {
+  padding-left: 2.5rem;
+
+  &+i {
+    top: 2.15rem;
+    left: 1rem;
+  }
+}
+
+input:hover[type="text"],
+input:hover[type="email"],
+input:hover[type="number"],
+select:hover,
+input:focus[type="text"],
+input:focus[type="email"],
+input:focus[type="number"],
+select:focus {
+  outline: solid 1px var(--color-orange);
+}
+
+select {
+  appearance: none;
+
+  &+i {
+    top: 2.15rem;
+    right: 1rem;
+  }
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+.team-size,
+.lead-source {
+  label {
+    margin-top: .5rem;
+    border: 1px solid var(--color-tundora);
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: var(--color-woodsmoke);
+
+    input {
+      appearance: none;
+      margin: 0;
+      border: none;
+      padding: 0;
+
+      &:checked~i,
+      &:checked~span {
+        border-color: var(--color-white);
+        color: var(--color-white) !important;
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border-color: var(--color-orange) !important;
+
+      span,
+      i {
+        color: var(--color-white);
+      }
+    }
+
+    &:focus-within {
+      color: inherit;
+    }
+  }
+
+  &:hover legend {
+    color: var(--color-orange);
+  }
+}
+
+.team-size {
+  label {
+    i {
+      top: 14px;
+      left: 14px;
+      width: 44px;
+      padding: 13px;
+      border: 1px solid var(--color-tundora);
+      border-radius: 7px;
+    }
+
+    span {
+      margin-left: 3.5rem;
+    }
+
+    span:first-of-type {
+      margin-bottom: .25rem;
+      font-weight: 700;
+    }
+
+    &:first-of-type i {
+      padding-left: 16px;
+    }
+  }
+}
+
+.lead-source {
+  label {
+    width: 31%;
+    margin-right: 1.3rem !important;
+
+    &:nth-of-type(3) {
+      margin-right: 0 !important;
+    }
+
+    span {
+      text-align: center;
+      margin-left: -1rem;
+
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.more-details {
+  label {
+    width: 100%;
+
+    textarea {
+      height: 5rem;
+      resize: none;
+    }
+  }
+}
+
+input[type="submit"] {
+  float: right;
+  width: 25%;
+  margin: 0;
+  border: none;
+  padding: .7rem 3rem;
+  color: var(--color-baltic-sea);
+  font-weight: 600;
+  background-color: var(--color-orange);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  main {
+    max-width: 400px;
+    margin: 2rem auto;
+  }
+
+  fieldset {
+    label {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .team-size label:first-of-type {
+    margin-bottom: 0;
+  }
+
+  .lead-source label {
+    width: 100%;
+
+    &:not(.lead-source label:last-of-type) {
+      margin-bottom: 0;
+    }
+  }
+
+  .more-details textarea {
+    height: 8rem !important;
+  }
+
+  input[type="submit"] {
+    float: none;
+    width: 100%;
+  }
+}

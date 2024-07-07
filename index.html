@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Build a Survey Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@0,100..900;1,100..900&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <main>
+    <section>
+      <h1 id="title">Lets <span>Talk</span></h1>
+      <p id="description">
+        Our team is here round-the-clock,
+        <br />ready to respond to all your inquires
+      </p>
+
+      <form id="survey-form" action="">
+        <fieldset>
+          <label id="name-label" for="name">
+            Name
+            <input id="name" name="name" type="text" placeholder="Enter your name" required />
+            <i class="fa-regular fa-user"></i>
+          </label>
+
+          <label for="dropdown">What are you looking for?
+            <select id="dropdown" name="dropdown">
+              <option value="project">Project Enquiry</option>
+              <option value="talent">Hire a talent</option>
+            </select>
+            <i class="fa-solid fa-caret-down"></i>
+          </label>
+
+          <label id="email-label" for="email">
+            Email
+            <input id="email" name="email" type="email" placeholder="Enter your email" required />
+            <i class="fa-regular fa-envelope"></i>
+          </label>
+
+          <label id="number-label" for="number">
+            Budget
+            <input id="number" name="number" type="number" placeholder="Enter a number" min="100" max="100000"
+              step="100" />
+            <i class="fa-solid fa-sack-dollar"></i>
+          </label>
+        </fieldset>
+
+        <fieldset class="team-size">
+          <legend>Number of employees</legend>
+          <label for="radio-1">
+            <input id="radio-1" name="radio" type="radio" value="solo" />
+            <i class="fa-solid fa-user"></i>
+            <span>I'm a solo creator</span>
+            <span>I need to enquire for myself.</span>
+          </label>
+          <label for="radio-2">
+            <input id="radio-2" name="radio" type="radio" value="team" />
+            <i class="fa-solid fa-user-group"></i>
+            <span>I'm part of a team</span>
+            <span>I need to enquire for a team.</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="lead-source">
+          <legend>How did you hear about us?</legend>
+          <label for="checkbox-1">
+            <input id="checkbox-1" name="checkbox-1" type="checkbox" value="search-engine" />
+            <span><i class="fa-solid fa-magnifying-glass"></i>Search engine</span>
+          </label>
+          <label for="checkbox-2">
+            <input id="checkbox-2" name="checkbox-2" type="checkbox" value="social-media" />
+            <span><i class="fa-regular fa-thumbs-up"></i>Social media</span>
+          </label>
+          <label for="checkbox-3">
+            <input id="checkbox-3" name="checkbox-3" type="checkbox" value="ads" />
+            <span><i class="fa-solid fa-rectangle-ad"></i>Advertising</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="more-details">
+          <label for="textarea">
+            Give us more details about your enquiry
+            <textarea id="textarea" name="textarea">Enter your comments</textarea>
+          </label>
+        </fieldset>
+
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
